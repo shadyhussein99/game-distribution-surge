@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Tech-Stack used
 
-## Getting Started
+- Next.js 15+ with App Router
+- tailwindcss
+- Zustand (for Global State Management)
 
-First, run the development server:
+## Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Games list with categories filtering (allows multi-select)
+- Games filtering Search
+- Detailed game page with iframe and "Similar games" section (according to Category)
+- Favorite Games section
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- SEO optimization using metadata for each page and dynamic metadata for single game page to display each game title dynamically which enhances SEO (Note: take a look at the tab title)
+- Using custom hook for favorite games and iframe logic to abstract complex logic
+- Minimize the use of Client Side Rendering components to enhance performance and SEO
+- CI/CD pipeline to ensure unit tests succeed before merging to "main" branch and block merging if it fails (with little unit tests just for POC)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## If I have more time
 
-## Learn More
+- Add more unit tests
+- Implement E2E testing
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run the chrome extention locally, use the following commands
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`git clone https://github.com/shadyhussein99/game-distribution-surge`
 
-## Deploy on Vercel
+Install the dependencies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`pnpm install`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Run the application
+
+`pnpm dev`
+
+## Deployment Link
+
+https://vercel.com/shadyhussein99s-projects/game-distribution-surge
+
+
+
