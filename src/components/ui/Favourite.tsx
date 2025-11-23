@@ -23,7 +23,10 @@ export const Favourite = ({ game }: FavouriteProps) => {
   const isFavourite = favouriteItems?.some((item) => item.id === game.id);
 
   return (
-    <div className={`absolute top-3 right-3 z-${zIndexes.favouriteIcon}`}>
+    <div
+      className="absolute top-3 right-3"
+      style={{ zIndex: zIndexes.favouriteIcon }}
+    >
       <Button
         size="icon"
         variant={isFavourite ? "destructive" : "default"}
