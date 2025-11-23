@@ -12,13 +12,7 @@ export const GamesGrid = ({ games, emptyMessage }: GamesGridProps) => {
       {games.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {games.map((game) => (
-            <GameCard
-              key={game.id}
-              id={game.id}
-              title={game.title}
-              developer={game.developer}
-              image={game.image}
-            />
+            <GameCard key={game.id} game={game} />
           ))}
         </div>
       ) : (
