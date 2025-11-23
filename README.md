@@ -39,7 +39,7 @@ Run the application
 
 ## Deployment Link
 
-https://vercel.com/shadyhussein99s-projects/game-distribution-surge
+https://game-distribution-surge.vercel.app/
 
 
 
