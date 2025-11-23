@@ -24,8 +24,8 @@ jobs:
         with:
           node-version: ${{ needs.install-deps.outputs.NODE_VERSION }}
 
-      - name: Set up pnpm
-        run: npm install -g pnpm
+      - name: Enable Corepack and install pnpm
+        run: corepack enable corepack prepare pnpm@latest --activate
 
       - name: Install dependencies
         run: pnpm ci
