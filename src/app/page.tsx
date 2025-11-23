@@ -13,22 +13,6 @@ export default function Home() {
             <Filters />
             <ResultsCount />
             <GamesList />
-
-            {/* No Results */}
-            {/* {filteredGames.length === 0 && (
-              <div className="text-center py-16">
-                <p className="text-muted text-lg mb-4">
-                  No games found matching your filters.
-                </p>
-                <Button
-                  variant="outline"
-                  onClick={clearAllFilters}
-                  className="rounded-xl"
-                >
-                  Clear All Filters
-                </Button>
-              </div>
-            )} */}
           </div>
         </div>
       </main>

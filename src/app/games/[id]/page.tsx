@@ -1,3 +1,5 @@
+import GamePlayer from "./GamePlayer";
+
 type GamePreviewProps = {
   params: Promise<{
     id: string;
@@ -6,7 +8,7 @@ type GamePreviewProps = {
 
 const GamePreview = async ({ params }: GamePreviewProps) => {
   const { id } = await params;
-  return <div>{id}</div>;
+  return <GamePlayer id={id} />;
 };
 
 export default GamePreview;
