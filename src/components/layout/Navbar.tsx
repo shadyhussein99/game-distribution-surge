@@ -6,7 +6,8 @@ import { Button } from "@/src/components/ui";
 export const Navbar = () => {
   return (
     <header
-      className={`w-full bg-white border-b px-[6%] sticky top-0 z-${zIndexes.navbar}`}
+      className="w-full bg-white border-b px-[6%] sticky top-0"
+      style={{ zIndex: zIndexes.navbar }}
     >
       <div className="flex items-center justify-between py-4 ">
         <div className="relative h-14 w-auto">
