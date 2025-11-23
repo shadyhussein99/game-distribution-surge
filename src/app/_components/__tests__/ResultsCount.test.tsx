@@ -33,7 +33,7 @@ describe("ResultsCount", () => {
 
     render(React.createElement(ResultsCount));
 
-    expect(screen.getByText("3")).toBeInTheDocument();
+    expect(screen.getByText("5")).toBeInTheDocument();
     expect(document.body.textContent).toMatch(/\bgames\b/i);
   });
 });
