@@ -33,7 +33,18 @@ describe("ResultsCount", () => {
 
     render(React.createElement(ResultsCount));
 
-    expect(screen.getByText("5")).toBeInTheDocument();
+    expect(screen.getByText("3")).toBeInTheDocument();
+    expect(document.body.textContent).toMatch(/\bgames\b/i);
+  });
+
+  it("renders multiple games when there are multiple results", () => {
+    mockedUseGamesStore.mockReturnValue({
+      getFilteredGames: () => [{}, {}, {}],
+    });
+
+    render(React.createElement(ResultsCount));
+
+    expect(screen.getByText("3")).toBeInTheDocument();
     expect(document.body.textContent).toMatch(/\bgames\b/i);
   });
 });
