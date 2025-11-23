@@ -1,3 +1,5 @@
+"use client";
+
 import { useGamesStore } from "@/src/store/useGamesStore";
 
 export const ResultsCount = () => {
@@ -7,7 +9,7 @@ export const ResultsCount = () => {
 
   return (
     <div className="mb-6">
-      <p className="text-sm text-muted-foreground">
+      <p className="text-sm text-muted">
         Showing{" "}
         <span className="font-semibold text-foreground">
           {filteredGames.length}

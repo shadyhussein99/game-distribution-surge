@@ -26,7 +26,6 @@
       "@app-constants/*": ["./src/constants/*"],
       "@app-types/*": ["./src/types/*"],
       "@app-store/*": ["./src/store/*"],
-      "@app-providers/*": ["./src/providers/*"],
     }
   },
   "include": [

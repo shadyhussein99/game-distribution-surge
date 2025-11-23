@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@app-components/ui/Button";
 import { ChevronDown, X, Check } from "lucide-react";
@@ -66,7 +68,7 @@ export const MultiSelectDropdown = ({
         <span className="flex items-center gap-2">
           {label}
           {selected.length > 0 && (
-            <span className="inline-flex items-center justify-center rounded-full bg-primary px-2 py-0.5 text-xs font-semibold text-primary-foreground">
+            <span className="inline-flex items-center justify-center rounded-full bg-primary px-2 py-0.5 text-xs font-semibold text-white">
               {selected.length}
             </span>
           )}
@@ -125,7 +127,7 @@ export const MultiSelectDropdown = ({
                       className="peer h-4 w-4 shrink-0 rounded-sm border-2 border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none checked:bg-primary checked:border-primary cursor-pointer"
                     />
                     {isChecked && (
-                      <Check className="absolute top-0 left-0 h-4 w-4 text-primary-foreground pointer-events-none" />
+                      <Check className="absolute top-0 left-0 h-4 w-4 text-white pointer-events-none" />
                     )}
                   </div>
                   <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">

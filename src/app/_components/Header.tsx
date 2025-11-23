@@ -4,7 +4,7 @@ export const Header = () => {
       <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-2">
         Games
       </h1>
-      <p className="text-muted-foreground text-lg">
+      <p className="text-muted text-lg">
         Discover thousands of free online games
       </p>
     </div>
