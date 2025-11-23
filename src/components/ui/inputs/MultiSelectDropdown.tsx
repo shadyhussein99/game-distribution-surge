@@ -5,13 +5,13 @@ import { Button } from "@app-components/ui/Button";
 import { ChevronDown, X, Check } from "lucide-react";
 import { cn } from "@app-lib/utils";
 
-interface MultiSelectDropdownProps {
+type MultiSelectDropdownProps = {
   label: string;
   options: string[];
   selected: string[];
   onChange: (selected: string[]) => void;
   onClear: () => void;
-}
+};
 
 export const MultiSelectDropdown = ({
   label,

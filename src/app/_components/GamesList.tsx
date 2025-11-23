@@ -15,6 +15,7 @@ export const GamesList = () => {
           {filteredGames.map((game) => (
             <GameCard
               key={game.id}
+              id={game.id}
               title={game.title}
               developer={game.developer}
               image={game.image}
