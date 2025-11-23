@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { zIndexes } from "@app-constants/index";
-import { Button } from "@/src/components/ui";
+import { Button, Spinner } from "@/src/components/ui";
 
 export const Navbar = () => {
   return (
@@ -17,7 +17,7 @@ export const Navbar = () => {
             width={180}
             height={180}
             sizes="(min-width: 1024px) 33vw, 100vw"
-            loading="lazy"
+            priority={true}
           />
         </div>
 

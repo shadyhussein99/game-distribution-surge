@@ -1,6 +1,6 @@
 import { NoGameFound } from "./NoGameFound";
 import { Header } from "./Header";
-import { GameIframe } from "./GameIframe";
+import { GameIframe } from "./(i-frame)/GameIframe";
 import { GameFooter } from "./GameFooter";
 import { RelatedGames } from "./RelatedGames";
 import { games } from "@app-constants/mockedData";
