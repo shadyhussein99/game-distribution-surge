@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { games } from "@app-constants/mockedData";
-import GamePlayer from "./GamePlayer";
+import GamePlayer from "./_components/GamePlayer";
 
 type GamePreviewProps = {
   params: Promise<{

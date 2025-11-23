@@ -41,6 +41,12 @@
       ],
       "@app-store/*": [
         "./src/store/*"
+      ],
+      "@app-icons/*": [
+        "./src/icons/*"
+      ],
+       "@app-hooks/*": [
+        "./src/hooks/*"
       ]
     }
   },

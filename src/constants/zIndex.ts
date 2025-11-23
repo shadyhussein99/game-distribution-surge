@@ -1,3 +1,5 @@
 export const zIndexes = {
-  navbar: 50,
+  favouriteIcon: 50,
+  dropdown: 100,
+  navbar: 150,
 };

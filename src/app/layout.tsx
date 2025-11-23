@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { Navbar } from "@app-components/layout";
+import { Navbar, AppLayout } from "@app-components/layout";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
@@ -19,7 +19,8 @@ export default function RootLayout({
       <body className="antialiased">
         <Toaster />
         <Navbar />
-        {children}
+
+        <AppLayout>{children}</AppLayout>
       </body>
     </html>
   );

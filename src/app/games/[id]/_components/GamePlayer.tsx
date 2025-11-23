@@ -1,8 +1,8 @@
-import { NoGameFound } from "./_components/NoGameFound";
-import { Header } from "./_components/Header";
-import { GameIframe } from "./_components/GameIframe";
-import { GameFooter } from "./_components/GameFooter";
-import { RelatedGames } from "./_components/RelatedGames";
+import { NoGameFound } from "./NoGameFound";
+import { Header } from "./Header";
+import { GameIframe } from "./GameIframe";
+import { GameFooter } from "./GameFooter";
+import { RelatedGames } from "./RelatedGames";
 import { games } from "@app-constants/mockedData";
 
 type GamePlayerProps = {

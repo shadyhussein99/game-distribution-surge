@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@app-components/ui/Button";
 import { ChevronDown, X, Check } from "lucide-react";
 import { cn } from "@app-lib/utils";
+import { zIndexes } from "@app-constants/index";
 
 type MultiSelectDropdownProps = {
   label: string;
@@ -82,7 +83,9 @@ export const MultiSelectDropdown = ({
       </Button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 mt-2 w-72 rounded-xl border-2 border-border bg-background shadow-xl z-50 animate-fade-in">
+        <div
+          className={`absolute top-full left-0 mt-2 w-72 rounded-xl border-2 border-border bg-background shadow-xl z-${zIndexes.dropdown} animate-fade-in`}
+        >
           <div className="p-3 border-b border-border bg-muted/30">
             <div className="flex items-center justify-between gap-2">
               <Button
