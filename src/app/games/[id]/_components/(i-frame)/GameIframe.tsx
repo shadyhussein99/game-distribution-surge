@@ -14,7 +14,6 @@ type GameIframeProps = {
 export const GameIframe = ({ selectedGame }: GameIframeProps) => {
   const iframeWrapperRef = useRef<HTMLDivElement | null>(null);
   const {
-    isLoading,
     isError,
     iframeKey,
     handleIframeLoad,
@@ -53,13 +52,6 @@ export const GameIframe = ({ selectedGame }: GameIframeProps) => {
           </Button>
         </div>
       </div>
-
-      {/* Handle iframe loading */}
-      {isLoading && !isError && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <Spinner />
-        </div>
-      )}
     </>
   );
 };
