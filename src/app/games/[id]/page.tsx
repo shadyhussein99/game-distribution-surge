@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { games } from "@app-constants/mockedData";
 import GamePlayer from "./GamePlayer";
 
 type GamePreviewProps = {
@@ -5,6 +7,20 @@ type GamePreviewProps = {
     id: string;
   }>;
 };
+
+// Dynamic metadata for each game to optimize SEO
+export async function generateMetadata({
+  params,
+}: GamePreviewProps): Promise<Metadata> {
+  const id = (await params).id;
+
+  const selectedGame = games.find((g) => g.id === id);
+
+  return {
+    title: selectedGame?.title,
+    description: `${selectedGame?.title}, ${selectedGame?.category}, developed by ${selectedGame?.developer}, play now!`,
+  };
+}
 
 const GamePreview = async ({ params }: GamePreviewProps) => {
   const { id } = await params;
