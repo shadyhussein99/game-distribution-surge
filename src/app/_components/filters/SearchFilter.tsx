@@ -1,12 +1,27 @@
 "use client";
 
-import { Button, TextInput } from "@/src/components/ui";
+import { useEffect, useState } from "react";
 import { Search, X } from "lucide-react";
-import React from "react";
+import { Button, TextInput } from "@/src/components/ui";
 import { useGamesStore } from "@/src/store/useGamesStore";
+import { useDebounce } from "@app-hooks/index";
 
 export const SearchFilter = () => {
+  const [inputValue, setInputValue] = useState("");
   const { searchQuery, setSearchQuery } = useGamesStore();
+
+  // Simulate pulling data from API using debounce
+  const debouncedSearchQuery = useDebounce(inputValue);
+
+  useEffect(() => {
+    setSearchQuery(debouncedSearchQuery);
+  }, [debouncedSearchQuery]);
+
+  useEffect(() => {
+    if (!searchQuery) {
+      setInputValue("");
+    }
+  }, [searchQuery]);
 
   return (
     <div className="mb-8 max-w-md">
@@ -15,8 +30,8 @@ export const SearchFilter = () => {
         <TextInput
           type="text"
           placeholder="Search Games"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
           className="pl-10 h-12 rounded-xl border-2 bg-background focus-visible:ring-2 focus-visible:ring-primary"
         />
         {searchQuery && (
