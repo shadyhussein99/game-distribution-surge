@@ -4,4 +4,5 @@ export type Game = {
   developer: string;
   image: string;
   category: string;
+  iframeURL: string;
 };

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Card } from "@app-components/ui";
+import { Card } from "@app-components/shared";
 
 type GameCardProps = {
   id: string;
