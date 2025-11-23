@@ -85,7 +85,7 @@ export const MultiSelectDropdown = ({
       {isOpen && (
         <div
           className="absolute top-full left-0 mt-2 w-72 rounded-xl border-2 border-border bg-background shadow-xl  animate-fade-in"
-          style={{ zIndex: zIndexes.navbar }}
+          style={{ zIndex: zIndexes.dropdown }}
         >
           <div className="p-3 border-b border-border bg-muted/30">
             <div className="flex items-center justify-between gap-2">
